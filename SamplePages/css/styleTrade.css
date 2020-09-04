@@ -1,0 +1,1189 @@
+/*
+* @Author: sean
+* @Date:   2018-12-20 15:05:12
+* @Last Modified by:   sean
+* @Last Modified time: 2019-03-08 10:48:06
+*/
+/* FONTS ----------------------*/
+
+@import url("//hello.myfonts.net/count/385e1e");
+
+  
+@font-face {font-family: 'Campton-Light';src: url('webfonts/385E1E_0_0.eot');src: url('webfonts/385E1E_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/385E1E_0_0.woff2') format('woff2'),url('webfonts/385E1E_0_0.woff') format('woff'),url('webfonts/385E1E_0_0.ttf') format('truetype');}
+@font-face {
+font-family: 'DIN Pro Condensed Regular';
+font-style: normal;
+font-weight: normal;
+src: local('DIN Pro Condensed Regular'), url('webfonts/DINPro-Cond.woff') format('woff');
+}
+html{
+   height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+h1, h2, h3, p, li {
+  color: #fffff0;
+}
+
+h1 {
+  font-family: "DIN Pro Condensed Regular";
+  font-size: 2.2em;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  text-shadow: -2px 2px 2px #000000;
+  letter-spacing: 0.2;
+
+
+}
+h2 {
+  font-family: "DIN Pro Condensed Regular";
+  font-size: 2em;
+  line-height: 2em;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+
+}
+h3 {
+  font-family: "DIN Pro Condensed Regular";
+  font-size: 1.2em;
+  line-height: 2em;
+}
+
+
+
+li{
+  font-family:  "DIN Pro Condensed Regular";
+  font-size:1em;
+}
+p { 
+  font-family: "Campton-Light";
+  font-size:0.9em;
+  line-height: 1.2em;
+
+}
+strong {
+  font-weight: bold;
+}
+/* a paragraph proceeded by another paragraph will have a top margin */
+h1 + p, p + p {
+    margin-top: 1em;
+}
+/* remove dotted outline from css on active buttons */
+
+header li a, a {
+   outline: 0;
+}
+h1 a, h2 a {
+  font-family: "DIN Pro Condensed Regular";
+  font-size: 1em;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: #fffff0;
+  text-decoration: underline;
+}
+
+h1 a, h2 a, h3 a, p a{
+ color: #fffff0;;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, p a:hover{
+ color: #8B634B;;
+}
+
+.line{
+    width:100%;
+    display: block;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 0.5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #fffff0;
+
+}
+
+/* /FONTS ----------------------*/
+
+
+
+/*--- Background Image ---*/
+html{
+  background-color: #000;
+}
+
+#back {
+    position: absolute;
+    top: 0;
+    bottom: 0;;
+    left: 0;
+    right: 0;
+    z-index: -100;
+    background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  background-position: center; 
+
+}
+
+/*
+body.home{
+  background-image:url(../img/background/home.jpg); 
+}
+body.page-template-template-food, body.page-template-template-menu{
+  background-image:url(../img/background/events.jpg);
+}
+body.tribe-theme-Trade{
+  background-image:url(../img/background/food.jpg);
+}
+
+body.page-template-template-membership, body.membership, body.membership-form {
+  background-image:url(../img/background/members.jpg);
+}
+
+body.page-template-template-news, body.post-template-default, body.page-template-template-partners, .page-template-template-Trade_Basic, .page-template-template-Press{
+  background-image:url(../img/background/more.jpg);
+}
+
+
+
+
+body{
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  background-position: center; 
+
+}
+/*--- Background Image ---*/
+
+
+.header {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height:50px;
+
+  background-color:rgba(0,0,0,0.7);
+
+}
+
+.mainLogo a img{
+  height: 36px;
+  position: relative;
+  padding-top: 9px;
+  padding-left: 9px;
+  float:left;
+}
+
+
+.header ul {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  color: #fffff0;
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  background-color:rgba(0,0,0,0.7);
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: #8B634B;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+
+}
+
+.header #menu {
+
+padding-top: 10px;
+opacity: 0;
+visibility: hidden;
+-webkit-transition: opacity 200ms, visibility 200ms;
+  transition: opacity 200ms, visibility 200ms;
+
+}
+
+#toggle{
+  height: 30px;
+  display: block;
+  float: right;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+.active {
+opacity: 1 !important;
+  visibility: visible !important;
+}
+
+
+/* ICON ANIMATION 1  ----------------------*/
+* {
+  margin: 0;
+  padding: 0; 
+}
+#nav-icon1 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 7px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fffff0;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 10px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 20px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 10px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 10px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+
+/* /ICON ANIMATION 1  ----------------------*/
+/* MEDIA 1100px +     ----------------------*/
+@media (min-width: 1100px) {
+  .menuBox {
+      right: 0;
+      position: absolute;
+      height: 36px;
+
+  }
+  .header li {
+    float:left;
+  }
+  .tradeLogo {
+    float: right;
+
+  }
+  
+  .header li a {
+    background-color: transparent;
+  }
+  .header #menu {
+    padding-top: 0px;
+    clear: none;
+    float: right;
+    opacity: 1;
+    visibility: visible;
+    
+  }
+  .header #toggle {
+    display: none;
+  }
+    /*--- DROPDOWN ---*/
+
+
+
+  .nav ul {
+      list-style: none;
+       position: absolute;
+      right:0px;
+      top :50px;
+      width: auto;
+    display: block;
+      background-color:rgba(0,0,0,0.7);
+      text-align: right;
+      display: none;
+     
+
+  }
+
+  .nav ul li {
+      float: none;
+    
+
+  }
+
+  .nav li:hover ul { 
+     display: block;
+     }
+
+ 
+
+}
+/* /MEDIA 1100px +     ----------------------*/
+
+
+
+
+/*------- FRAME --------*/
+
+
+.pageContent{
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  z-index: 2;
+  overflow:auto;
+  border: 2px solid #000;
+  border-image-source: url('../img/copper.jpg');
+  border-image-slice: 10;
+  border-image-repeat: round;
+  background-color: rgba(0,0,0,0.0);
+   -webkit-transition: background-color 1000ms ease;
+    -ms-transition: background-color 1000ms ease;
+    transition: background-color 1000ms ease;
+      overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  }
+
+.borderLeft { 
+  z-index: 3;
+  border-left: 2px solid transparent;
+  -webkit-border-image: url(../img/copperTall.jpg) space; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperTall.jpg) space; /* Opera 11-12.1 */
+ border-image: url(../img/copperTall.jpg) 30 stretch;
+}
+.borderRight{ 
+  z-index: 3;
+  border-right: 2px solid transparent;
+  -webkit-border-image: url(../img/copperTall.jpg) 100 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperTall.jpg) 100 round; /* Opera 11-12.1 */
+  border-image: url(../img/copperTall.jpg) 100 round;
+}
+
+.borderTop { 
+  z-index: 3;
+  border-top: 2px solid transparent;
+  -webkit-border-image: url(../img/copperWide.jpg) 30 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperWide.jpg) 30 round; /* Opera 11-12.1 */
+  border-image: url(../img/copperWide.jpg) 30 round;
+}
+.borderBottom { 
+  z-index: 3;
+  border-bottom: 2px solid transparent;
+  -webkit-border-image: url(../img/copperWide.jpg) 30 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperWide.jpg) 30 round; /* Opera 11-12.1 */
+  border-image: url(../img/copperWide.jpg) 30 round;
+}
+
+
+
+/*------ /FRAME --------*/
+
+.wrapper{
+  height: 100%;
+
+width: 100%;
+position: relative;
+  z-index: 3;
+
+}
+
+.fullScreen{
+  height: 100vh;
+}
+
+
+
+
+/*------- FOOTER --------*/
+footer{
+        padding: 1em;
+        z-index: 4;
+    }
+
+
+.footerSection {
+  width: 100%;
+  margin-bottom: 2em;
+} 
+
+.footerTop a{
+  color:#fffff0;
+}
+.footerTop a:hover, .footerTop a p:hover, .footerBottom a p:hover{
+  color:#8B634B;
+}
+
+.footerTop{
+  margin-bottom: 1em;
+
+}
+.footerTop a p{
+  margin-top:1em;
+}
+.footerBottom a p{
+  margin-top:1em;
+}
+
+
+
+
+/*
+footer {
+  position: relative;
+  z-index: 1;
+}
+footer .grid {
+  grid-column-gap: 1em;
+}
+
+
+.footerSection h3{
+  padding-bottom: 1em;
+}
+
+
+/*------- /FOOTER --------*/
+/* ------- ALL PAGES ---------*/
+
+
+/* ------- /ALL PAGES ---------*/
+
+/*------- Buttons and CARDS --------*/
+.btnBox{
+  padding-top: 1em;
+}
+.btn {
+  border: 1px solid #fffff0;
+  background-color: transparent;
+  color: #fffff0;
+  padding: 0.5em 2em;
+  cursor: pointer;
+    font-family: "DIN Pro Condensed Regular";
+  font-size: 1em;
+  
+  text-transform: uppercase;
+  margin-top: 1em;
+  margin-bottom: 1em;       
+}
+
+.btn:hover {
+  border-color: #8B634B;
+  color: #8B634B;
+}
+
+.card {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  text-align: left;
+  background-color: #000;
+  outline: 1px solid #fffff0;
+  outline-offset: -1em;
+  margin-bottom: 4em;
+}
+ .card img{
+  min-width:100%;
+    min-height:100%;
+    height:auto;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.cardContainer {
+  position: relative;
+  outline: 1px solid #fffff0;
+  outline-offset: -1em;
+}
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,0.7);
+}
+
+
+.cardText {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* hover image buttons */
+.container {
+  position: relative;
+  outline: 1px solid #fffff0;
+  outline-offset: -1em;
+  margin-bottom: 4em;
+
+}
+
+.container img{
+min-width: 100%;
+min-height: 100%;
+object-fit: cover;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,0.7);
+}
+
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* /hover image buttons */
+
+
+
+
+/*------- / Buttons and CARDS --------*/
+
+ /*------- Food & Drink--------*/
+
+ .menuSection {
+  padding: 2em 0em;
+ }
+ .menuSection h2 {
+  padding-bottom: 1em;
+ }
+
+/* EVENTS PAGE */
+
+
+.tribe-events-page-title{
+  font-family: "DIN Pro Condensed Regular";
+  font-size: 2em;
+  text-transform: uppercase;
+  padding-bottom: 4em;
+  font-weight: bold;
+}
+.tribe-bar-filters-inner{
+    color: #fffff0;
+  background-color:rgba(0,0,0,0.7); 
+}
+
+.tribe-events-loop h2{
+font-size: 1.5em;
+}
+.tribe-events-list-separator-month {
+ color: #000;
+  background-color:#8B634B;
+}
+.tribe-event-schedule-details, .tribe-events-single-event-description  {
+  color: #fffff0;
+}
+#tribe-bar-views-label, #tribe-bar-views-toggle {
+  color: #fff;
+}
+
+#tribe-bar-date, #tribe-bar-search, #tribe-bar-filters{
+  color: #fffff0;
+}
+#tribe-bar-form .tribe-bar-submit input[type="submit"]{
+ border: 1px solid #fffff0;
+}
+.tribe-events-calendar {
+  color: #000;
+  background-color:rgba(0,0,0,0.7); 
+}
+#tribe-events-monday, #tribe-events-tuesday, #tribe-events-wednesday, #tribe-events-thursday, #tribe-events-friday, #tribe-events-saturday, #tribe-events-sunday{
+  color: #000;
+  background-color:#8B634B;
+}
+.tribe-events-tooltip p, .tribe-events-tooltip h3{
+color: #000;
+}
+#tribe-events-content{
+
+  padding: 2em;
+}
+#tribe-events-content h1 {
+  text-transform: uppercase;
+}
+a .tribe-events-button, a .tribe-events-gcal {
+    font-family: "DIN Pro Condensed Regular";
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 1em;
+  margin-bottom: 1em;   
+}
+
+.tribe-events-event-image {
+  max-width: 50%;
+}
+
+/* Tribe Events Details Pages
+body.tribe_events-template-default .pageContent {
+   background-color:rgba(0,0,0,0.7); 
+}
+
+/* /EVENTS PAGE */
+
+
+
+
+/* NEWS PAGE */
+hr{
+    border-top: 1px solid #fffff0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.storyImage{
+  width: 100%;
+  height: 15em;
+  background-size: cover; 
+  margin-top: 1em;
+}
+.wp-post-image{
+  margin-top: 1em;
+}
+
+.more-link {
+
+  color: #fffff0;
+    
+}
+
+.more-link:hover {
+
+  color: #8B634B;
+}
+
+/*------- MAIN--------*/
+ main{
+    flex: 1;
+    z-index: 5;
+  }
+
+  section{
+    padding: 1em;
+  }
+
+.headline, .tribe-events-title-bar{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 45vh;
+  }
+ .centerVertical {
+  display: flex;
+  align-items: center;
+}
+
+.imgPadding {
+
+  padding-bottom: 2em;
+}
+.imgPadding img{
+  width: 100%;
+  }
+/*------- /MAIN--------*/
+
+
+
+/* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ 
+
+@media (min-width: 700px) {
+
+  /*------- MAIN--------*/
+
+ 
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 4em;
+  }
+
+  section{
+    grid-column: span 12;
+
+  }
+
+  .headline{
+    grid-column: span 12;
+
+
+  }
+
+  .span4{
+   grid-column: span 6;
+ }
+
+ .span8{
+   grid-column:  span 12;
+
+ }
+ .indent2{
+  grid-column: 2 / span 10;
+ }
+ 
+
+ .span12{
+   grid-column:  span 12;
+
+ }
+
+
+
+
+
+/* Footer */
+footer{
+  padding: 4em 4em 1em 4em;
+}
+.footerSection{
+  grid-column:  span 6;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+}
+
+
+.footerBottom{
+  margin-top:auto;
+}
+
+#footerSocial  {
+
+  margin-right: auto;
+}
+
+/* PRESS */
+.pressContent a {
+  float: left;
+  width:50%;
+  padding-bottom: 1em;
+}
+
+/* /PRESS */
+
+/* Border */
+.pageContent{
+ position: fixed;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  overflow:auto;
+  border: 4px solid #000;
+  border-image-source: url('../img/copper.jpg');
+  border-image-slice: 10;
+  border-image-repeat: round;
+  background-color: rgba(0,0,0,0.0);
+   -webkit-transition: background-color 1000ms ease;
+    -ms-transition: background-color 1000ms ease;
+    transition: background-color 1000ms ease;
+      overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+
+.borderLeft { 
+  z-index: 3;
+  border-left: 4px solid transparent;
+  -webkit-border-image: url(../img/copperTall.jpg) space; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperTall.jpg) space; /* Opera 11-12.1 */
+ border-image: url(../img/copperTall.jpg) 30 stretch;
+}
+.borderRight{ 
+  z-index: 3;
+  border-right: 4px solid transparent;
+  -webkit-border-image: url(../img/copperTall.jpg) 100 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperTall.jpg) 100 round; /* Opera 11-12.1 */
+  border-image: url(../img/copperTall.jpg) 100 round;
+}
+
+.borderTop { 
+  z-index: 3;
+  border-top: 4px solid transparent;
+  -webkit-border-image: url(../img/copperWide.jpg) 30 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperWide.jpg) 30 round; /* Opera 11-12.1 */
+  border-image: url(../img/copperWide.jpg) 30 round;
+}
+.borderBottom { 
+  z-index: 3;
+  border-bottom: 4px solid transparent;
+  -webkit-border-image: url(../img/copperWide.jpg) 30 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperWide.jpg) 30 round; /* Opera 11-12.1 */
+  border-image: url(../img/copperWide.jpg) 30 round;
+}
+
+/* /Border */
+
+}
+
+
+/*------- /min-width: 700px--------*/
+
+
+
+
+@media (min-width: 1100px) {
+
+  /*------- MAIN--------*/
+  .line{
+    grid-column:  span 12;
+  }
+  
+  section{
+    padding: 6em;
+
+  }
+
+  .headline{
+    grid-column: 3 / span 8;
+
+  }
+
+  .span4{
+   grid-column: span 4;
+ }
+
+ .span8{
+  grid-column:  span 8;
+ }
+ .indent2{
+  grid-column: 3 / span 8;
+ }
+ 
+
+ /*buttons*/
+ .overlay {
+  opacity:0 ;
+ }
+
+ .container:hover .overlay {
+  opacity: 1;
+ } 
+
+ .cardOverlay {
+  opacity:0 ;
+ }
+
+ .cardContainer:hover .cardOverlay {
+  opacity: 1;
+ } 
+
+ /* /buttons */
+
+ /* Footer */
+ .footerSection{
+  grid-column:  span 3;
+}
+
+ #footerSocial {
+  text-align: right;
+
+ }
+ /* /Footer */
+}
+
+/*------- /min-width: 1200px--------*/
+
+
+/* WP FORMS */
+
+.wpforms-page-indicator-steps, .wpforms-field-label, .wpforms-field-description, .wpforms-page-indicator-page-title {
+  font-family: "Campton-Light";
+  font-size:0.9em;
+  line-height: 1.5em;
+  color: #fffff0;
+}
+
+
+.wpforms-page-indicator-steps, .wpforms-page-indicator-page-title {
+
+  text-transform: uppercase;  
+}
+.wpforms-field-sublabel {
+
+  text-transform: uppercase;  
+}
+
+
+.wpforms-container input.wpforms-field-medium, .wpforms-container select.wpforms-field-medium, .wpforms-container .wpforms-field-row.wpforms-field-medium {
+  max-width: 100%;
+  background-color:rgba(0,0,0,0.3);
+  color: #fffff0;
+  padding: 0.5em;
+  border: 1px solid #8B634B;
+}
+.wpforms-container .wpforms-field-row.wpforms-field-medium {
+  background-color: rgba(0,0,0,0.0);
+  border: transparent;
+}
+.wpforms-field-name-first, .wpforms-field-name-last, .wpforms-field-email-primary, .wpforms-field-email-secondary {
+  background-color:rgba(0,0,0,0.3);
+  color: #fffff0;
+  padding: 0.5em;
+  border: 1px solid #8B634B;
+}
+.wpforms-container .wpforms-field-sublabel {
+  margin-top: 5px;
+}
+.wpforms-container .wpforms-page-indicator.progress .wpforms-page-indicator-page-progress-wrap {
+  background-color: rgba(0,0,0,0.3);
+  border: 1px solid #8B634B;
+  border-radius: 0px;
+}
+.wpforms-container .wpforms-required-label {
+  color: #8B634B; 
+}
+.wpforms-container label.wpforms-error {
+  margin-top: 5px;
+}
+.wpforms-page-button, .wpforms-submit  {
+  border: 2px solid #8B634B;
+  background-color:rgba(0,0,0,0.3);
+  color: #8B634B;
+  padding: 0.5em 2em;
+  margin: 1em;
+  cursor: pointer;
+    font-family: "DIN Pro Condensed Regular";
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 2em;
+  margin-bottom: 2em; 
+}
+
+.wpforms-page-button:hover {
+  background-color: #8B634B;
+  color: black;
+}
+.wpforms-container .wpforms-submit-container .wpforms-submit {
+    border: 2px solid #8B634B;
+  background-color:rgba(0,0,0,0.3);
+  color: #8B634B;
+  padding: 0.5em 2em;
+  margin: 1em;
+  cursor: pointer;
+    font-family: "DIN Pro Condensed Regular";
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 2em;
+  margin-bottom: 2em;   
+}
+.wpforms-container .wpforms-submit-container .wpforms-submit:hover {
+  background-color: #8B634B;
+  color: black;
+}
+
+
+.wpforms-container .wpforms-field-date-time-date-year, .wpforms-container .wpforms-field-date-time-date-day, .wpforms-container .wpforms-field-date-time-date-month, .wpforms-field-address-address1, .wpforms-field-address-address2, .wpforms-field-address-city, .wpforms-field-address-state, .wpforms-field-address-postal, .wpforms-field-address-country  {
+  display: inline-block;
+width: auto;
+border: 1px solid #8B634B;
+   padding: 0.5em 2em;
+color: #fffff0;
+background-color: rgba(0,0,0,0.3);
+}
+
+.wpforms-container .wpforms-field-date-time-date-year option, .wpforms-container .wpforms-field-date-time-date-day option, .wpforms-container .wpforms-field-date-time-date-month option{
+  background-color: black;
+}
+.wpforms-container textarea.wpforms-field-medium {
+  max-width: 100%;
+  background-color:rgba(0,0,0,0.3);
+  color: #fffff0;
+  padding: 0.5em;
+  border: 1px solid #8B634B;
+}
+.wpforms-container input.wpforms-field-medium, .wpforms-container select.wpforms-field-medium, .wpforms-container .wpforms-field-row.wpforms-field-medium {
+    max-width: 100% !important;
+}
+
+.wpforms-container input.wpforms-field-medium, .wpforms-container select.wpforms-field-medium, .wpforms-container .wpforms-field-row.wpforms-field-medium {
+padding-left:0;
+padding-right: 0;
+}
+
+/* /WP FORMS */
+
+/* Video Loop */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index:-10;
+}
+/* /Video Loop */
+
+/* Animation */
+
+
+
+.headline {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        transform: translate3d(0,40px,0);
+        opacity:0;
+    }
+    to {
+         transform: translate3d(0,0,0);
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        transform: translate3d(0,40px,0);
+        opacity:0;
+    }
+    to {
+         transform: translate3d(0,0,0);
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+     from {
+        transform: translate3d(0,40px,0);
+        opacity:0;
+    }
+    to {
+         transform: translate3d(0,0,0);
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        transform: translate3d(0,40px,0);
+        opacity:0;
+    }
+    to {
+         transform: translate3d(0,0,0);
+        opacity:1;
+    }
+}
+
+
+.scroll-downs {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  
+  width :30px;
+  height: 55px;
+}
+
+.scroller {
+        -webkit-animation: action 1s infinite  alternate;
+        animation: action 1s infinite  alternate;
+    }
+  @-moz-keyframes fadein { /* Firefox */
+
+
+  }
+
+    @-webkit-keyframes action {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    @keyframes action {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+
+
+/* / Animation */
+
+

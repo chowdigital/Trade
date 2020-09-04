@@ -1,0 +1,718 @@
+/*
+* @Author: sean
+* @Date:   2018-12-20 15:05:12
+* @Last Modified by:   sean
+* @Last Modified time: 2019-02-28 11:08:49
+*/
+/* FONTS ----------------------*/
+
+@import url("//hello.myfonts.net/count/385e1e");
+
+  
+@font-face {font-family: 'Campton-Light';src: url('webfonts/385E1E_0_0.eot');src: url('webfonts/385E1E_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/385E1E_0_0.woff2') format('woff2'),url('webfonts/385E1E_0_0.woff') format('woff'),url('webfonts/385E1E_0_0.ttf') format('truetype');}
+@font-face {
+font-family: 'DIN Pro Condensed Regular';
+font-style: normal;
+font-weight: normal;
+src: local('DIN Pro Condensed Regular'), url('webfonts/DINPro-Cond.woff') format('woff');
+}
+html{
+   height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+h1, h2, h3, p, li {
+	color: #fffff0;
+}
+
+h1 {
+	font-family: "DIN Pro Condensed Regular";
+	font-size: 2em;
+  text-transform: uppercase;
+
+
+}
+h2 {
+  font-family: "DIN Pro Condensed Regular";
+  font-size: 2em;
+  line-height: 2em;
+  text-transform: uppercase;
+
+}
+h3 {
+  font-family: "DIN Pro Condensed Regular";
+  font-size: 1.2em;
+  line-height: 2em;
+}
+
+
+
+li{
+	font-family:  "DIN Pro Condensed Regular";
+	font-size:1em;
+}
+p {	
+	font-family: "Campton-Light";
+	font-size:0.9em;
+	line-height: 1.2em;
+
+}
+strong {
+	font-weight: bold;
+}
+/* a paragraph proceeded by another paragraph will have a top margin */
+h1 + p, p + p {
+    margin-top: 1em;
+}
+/* remove dotted outline from css on active buttons */
+
+header li a, a {
+   outline: 0;
+}
+h1 a, h2 a {
+  font-family: "DIN Pro Condensed Regular";
+  font-size: 1em;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: #fffff0;
+  text-decoration: underline;
+}
+h1 a:hover, h2 a:hover {
+ color: #8B634B;;
+}
+
+.line{
+    grid-column:  span 12;
+    display: block;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 0.5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #fffff0;
+
+}
+
+/* /FONTS ----------------------*/
+
+
+
+/*--- Background Image ---*/
+body.home{
+  background-image:url(../img/background/home.jpg);
+}
+body.page-template-template-food{
+  background-image:url(../img/background/food.jpg);
+}
+body.tribe-theme-Trade{
+  background-image:url(../img/background/events.jpg);
+}
+
+body.page-template-template-membership{
+  background-image:url(../img/background/members.jpg);
+}
+
+body.page-template-template-news, body.post-template-default, body.page-template-template-partners{
+  background-image:url(../img/background/more.jpg);
+}
+body{
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  background-position: center; 
+}
+/*--- Background Image ---*/
+
+
+.header {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height:50px;
+  /*background-color:rgba(0,0,0,0.7);*/
+
+}
+
+.mainLogo a img{
+  height: 36px;
+  position: relative;
+  padding-top: 9px;
+  padding-left: 9px;
+  float:left;
+}
+
+
+.header ul {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  color: #fffff0;
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  background-color:rgba(0,0,0,0.7);
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: #8B634B;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+
+}
+
+.header #menu {
+
+padding-top: 10px;
+opacity: 0;
+visibility: hidden;
+-webkit-transition: opacity 200ms, visibility 200ms;
+  transition: opacity 200ms, visibility 200ms;
+
+}
+
+#toggle{
+  height: 30px;
+  display: block;
+  float: right;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+.active {
+opacity: 1 !important;
+  visibility: visible !important;
+}
+
+
+/* ICON ANIMATION 1  ----------------------*/
+* {
+  margin: 0;
+  padding: 0; 
+}
+#nav-icon1 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 7px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fffff0;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 10px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 20px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 10px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 10px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+
+/* /ICON ANIMATION 1  ----------------------*/
+/* MEDIA 1100px +     ----------------------*/
+@media (min-width: 1100px) {
+  .menuBox {
+      right: 0;
+      position: absolute;
+      height: 36px;
+
+  }
+  .header li {
+    float:left;
+  }
+  .tradeLogo {
+    float: right;
+
+  }
+  
+  .header li a {
+    background-color: transparent;
+  }
+  .header #menu {
+    padding-top: 0px;
+    clear: none;
+    float: right;
+    opacity: 1;
+    visibility: visible;
+    
+  }
+  .header #toggle {
+    display: none;
+  }
+    /*--- DROPDOWN ---*/
+
+
+
+  .nav ul {
+      list-style: none;
+       position: absolute;
+      right:0px;
+      top :50px;
+      width: auto;
+    display: block;
+      background-color:rgba(0,0,0,0.7);
+      text-align: right;
+      display: none;
+     
+
+  }
+
+  .nav ul li {
+      float: none;
+    
+
+  }
+
+  .nav li:hover ul { 
+     display: block;
+     }
+
+ 
+
+}
+/* /MEDIA 1100px +     ----------------------*/
+
+
+
+
+/*------- FRAME --------*/
+
+.pageContent {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  overflow: scroll;
+  background-color:rgba(0,0,0,0.8); 
+ border: 4px solid #cc4242;
+
+  border-image-source: url('../img/copper.jpg');
+  border-image-slice: 10;
+  border-image-repeat: round;
+}
+
+
+.borderLeft { 
+  border-left: 4px solid transparent;
+  /*-webkit-border-image: url(../img/copperTall.jpg) space; /* Safari 3.1-5 */
+  /*-o-border-image: url(../img/copperTall.jpg) space; /* Opera 11-12.1 */
+ border-image: url(../img/copperTall.jpg) 30 stretch;
+}
+.borderRight{ 
+  border-right: 4px solid transparent;
+  -webkit-border-image: url(../img/copperTall.jpg) 100 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperTall.jpg) 100 round; /* Opera 11-12.1 */
+  border-image: url(../img/copperTall.jpg) 100 round;
+}
+
+.borderTop { 
+  border-top: 4px solid transparent;
+  -webkit-border-image: url(../img/copperWide.jpg) 30 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperWide.jpg) 30 round; /* Opera 11-12.1 */
+  border-image: url(../img/copperWide.jpg) 30 round;
+}
+.borderBottom { 
+  border-bottom: 4px solid transparent;
+  -webkit-border-image: url(../img/copperWide.jpg) 30 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/copperWide.jpg) 30 round; /* Opera 11-12.1 */
+  border-image: url(../img/copperWide.jpg) 30 round;
+}
+.wrapper{
+  height: 100%;
+
+width: 100%;
+position: relative;
+}
+
+
+
+
+/*------ /FRAME --------*/
+
+
+/*------- FOOTER --------*/
+footer {
+  position: relative;
+  padding:2em;
+   z-index: 1;
+}
+footer .grid {
+  grid-column-gap: 1em;
+}
+
+
+.footerSection h3{
+  padding-bottom: 1em;
+}
+
+
+/*------- /FOOTER --------*/
+
+
+
+/*------- Buttons and CARDS --------*/
+.btn {
+  border: 1px solid #fffff0;
+  background-color: transparent;
+  color: #fffff0;
+  padding: 0.5em 2em;
+  cursor: pointer;
+    font-family: "DIN Pro Condensed Regular";
+  font-size: 1em;
+  
+  text-transform: uppercase;
+  margin-top: 1em;
+  margin-bottom: 1em;       
+}
+
+.btn:hover {
+  border-color: #8B634B;
+  color: #8B634B;
+}
+
+.card {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  text-align: left;
+  background-color: #000;
+  outline: 1px solid #fffff0;
+  outline-offset: -1em;
+  margin-bottom: 4em;
+}
+ .card img{
+  min-width:100%;
+    min-height:100%;
+    height:auto;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.card .container {
+  position: absolute;
+  top: 0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  padding:100px 3em 0em 3em;
+}
+/* hover image buttons */
+.container {
+  position: relative;
+  outline: 1px solid #fffff0;
+  outline-offset: -1em;
+  margin-bottom: 4em;
+
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,0.7);
+}
+
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* /hover image buttons */
+
+
+
+
+/*------- / Buttons and CARDS --------*/
+
+/* EVENTS PAGE */
+
+.tribe-theme-Trade .pageContent{
+  background-color:rgba(0,0,0,0.7); 
+}
+.tribe-events-page-title{
+  font-family: "DIN Pro Condensed Regular";
+  font-size: 2em;
+  text-transform: uppercase;
+  padding-bottom: 4em;
+  font-weight: bold;
+}
+.tribe-bar-filters-inner{
+    color: #fffff0;
+  background-color:rgba(0,0,0,0.7); 
+}
+
+.tribe-events-loop h2{
+font-size: 1.5em;
+}
+.tribe-events-list-separator-month {
+ color: #000;
+  background-color:#8B634B;
+}
+.tribe-event-schedule-details {
+  color: #fffff0;
+}
+#tribe-bar-views-label, #tribe-bar-views-toggle {
+  color: #fff;
+}
+
+#tribe-bar-date, #tribe-bar-search, #tribe-bar-filters{
+  color: #fffff0;
+}
+#tribe-bar-form .tribe-bar-submit input[type="submit"]{
+ border: 1px solid #fffff0;
+}
+.tribe-events-calendar {
+  color: #000;
+  background-color:rgba(0,0,0,0.7); 
+}
+#tribe-events-monday, #tribe-events-tuesday, #tribe-events-wednesday, #tribe-events-thursday, #tribe-events-friday, #tribe-events-saturday, #tribe-events-sunday{
+  color: #000;
+  background-color:#8B634B;
+}
+.tribe-events-tooltip p, .tribe-events-tooltip h3{
+color: #000;
+}
+#tribe-events-content{
+  background-color:rgba(0,0,0,0.7); 
+  padding: 2em;
+}
+#tribe-events-content h1 {
+  text-transform: uppercase;
+}
+a .tribe-events-button, a .tribe-events-gcal {
+    font-family: "DIN Pro Condensed Regular";
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 1em;
+  margin-bottom: 1em;   
+}
+
+/* /EVENTS PAGE */
+
+
+/* NEWS PAGE */
+hr{
+    border-top: 1px solid #fffff0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.storyImage{
+  width: 100%;
+  height: 15em;
+  background-size: cover; 
+}
+
+.more-link {
+
+  color: #fffff0;
+    
+}
+
+.more-link:hover {
+
+  color: #8B634B;
+}
+
+/* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ 
+
+@media (min-width: 700px) {
+
+    /*------- MAIN--------*/
+
+  main{
+    flex: 1;
+  }
+  section{
+    padding: 1em;
+     grid-column: span 12;
+     
+  }
+
+  .headline{
+    grid-column: span 12;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .span4{
+   grid-column: span 6;
+  }
+
+  .span8{
+   grid-column:  span 12;
+
+  }
+
+  .span12{
+   grid-column:  span 12;
+
+  }
+  .centerVertical {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*------- /MAIN--------*/
+
+@media (min-width: 1100px) {
+  /*------- MAIN--------*/
+ 
+  
+  section{
+  padding: 6em;
+
+  }
+
+  .headline{
+    grid-column: 3 / span 8;
+
+  }
+
+  .span4{
+   grid-column: span 4;
+  }
+
+  .span8{
+   grid-column:  span 8;
+
+  }
+
+
+}
+
+/*------- /MAIN--------*/
+
+
+  .grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 4em;
+  }
+ 
+  /*buttons*/
+  .overlay {
+    opacity:0 ;
+  }
+  .container:hover .overlay {
+  opacity: 1;
+  }  
+
+  footer{
+      padding: 6em;
+  }
+  .footerSection{
+    grid-column:  span 3;
+    display: flex;
+    flex-direction: column;
+    
+    text-align: left;
+   
+  }
+  .footerTop{
+   
+  }
+  .footerBottom{
+    margin-top:auto;
+  }
+  #footerSocial {
+    text-align: right;
+  }
+  #footerSocial p i {
+  padding-top: 0.6em;
+ margin-right: auto;
+  }
+
+  
+}
+
+

@@ -1,0 +1,60 @@
+[17-Jun-2020 15:51:54 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[22-Jun-2020 08:37:10 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[22-Jun-2020 18:59:02 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[22-Jun-2020 18:59:03 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[25-Jun-2020 12:38:22 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[03-Jul-2020 07:21:58 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[03-Jul-2020 07:21:58 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[14-Jul-2020 16:08:46 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[31-Jul-2020 17:53:52 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[05-Aug-2020 08:37:40 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[07-Aug-2020 10:40:42 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[09-Aug-2020 06:55:25 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[13-Aug-2020 20:11:44 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[28-Aug-2020 05:37:33 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
+[02-Sep-2020 18:01:10 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/seanclou/public_html/tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/index.php on line 1
