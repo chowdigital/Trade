@@ -2,51 +2,79 @@
 
 
 
-	<main role="main">
-		<!-- section -->
+<main role="main">
+
+<section class="grid fullScreen">
+				<div class="headline">
+						<h1><?php the_title(); ?></h1>				
+				</div>
+				<div class="scroll-downs">
+  					<div class="mousey">
+    					<a class="scrollTo"><div class="scroller"><img src="<?php echo get_template_directory_uri(); ?>/img/down-arrow.svg" alt=""></div></a>
+  					</div>
+				</div>
 		
+			</section>
+		<!-- section -->
+		<section class="grid">
 
-				<!-- section -->
-		<section>
-
+		<div class="span12">
 			<h1><?php the_title(); ?></h1>
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+			<div class="span8 indent2 grid">
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<!-- article -->
+				<?php
+						// The Query
+						$the_query = new WP_Query( 'category_name=events' );
+						 
+						// The Loop
+						if ( $the_query->have_posts() ) {
+						    while ( $the_query->have_posts() ) {
+						        $the_query->the_post();
+						      ?>
+									<div class="storyImage span4" style="background-image:url('<?php the_post_thumbnail_url(); ?>')";>
 
-				<?php the_content(); ?>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
-				<br class="clear">
+										<!--<img src="<?php the_post_thumbnail_url(); ?>"/>-->
+											
+										</div>
+									<div class="span8">
 
-				<?php edit_post_link(); ?>
+										<h2>
+											<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+										</h2>
+									
+						      <?php
 
-			</article>
-			<!-- /article -->
 
-		<?php endwhile; ?>
+						        
+						the_content();
+								
 
-		<?php else: ?>
+				?>	
+			</div> 
+			<div class="span12"><hr></div> 
+				<?php
 
-			<!-- article -->
-			<article>
+						    }
+						} else {
+						    // no posts found
+						}
+						/* Restore original Post Data */
+						wp_reset_postdata();
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-			</article>
-			<!-- /article -->
-
-		<?php endif; ?>
+	 
+			?>
+		</div>	
+		
 
 		</section>
 		<!-- /section -->
-
-
-		<!-- /section -->
 	</main>
+
 
 
 

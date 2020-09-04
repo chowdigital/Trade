@@ -3,7 +3,6 @@
 	<main role="main">
 	<!-- section -->
 	<section>
-		<a href="news"><p>« All News</p></a>
 
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 

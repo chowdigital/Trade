@@ -58,7 +58,7 @@
 							</ul>
 					   </li>
 					   
-					     <li class="hideSmallScreens"><a href="#events">EVENTS</a>
+					     <li class="hideSmallScreens"><a href="events">EVENTS</a>
 						
 					    </li>
 					    <li class="hideBigScreens"><a href="events">EVENTS</a></li>

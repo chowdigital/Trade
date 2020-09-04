@@ -139,7 +139,7 @@
 				$('#back').animate({opacity: 0}, 0).css({'background-image': 'url(https://tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/img/all/2019-12-updates1.jpg)'}).animate({opacity: 1}, 2500);
 
 			} 
-			else   if($('body').is('.tribe-theme-Trade_Custom_Theme')){
+			else   if($('body').is('.page-template-template-events')){
 
 				$('#back').animate({opacity: 0}, 0).css({'background-image': 'url(https://tradesoho.co.uk/wp-content/themes/Trade_Custom_Theme/img/all/2019-12-updates5.jpg)'}).animate({opacity: 1}, 2500);
 

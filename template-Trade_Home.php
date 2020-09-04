@@ -62,52 +62,10 @@
 
 
 
-			<section class="grid">
-				<div class="subheading">
-						<h2>EVENTS AT TRADE</h2>				
-				</div>
-
-	<?php $events = tribe_get_events( array( 'posts_per_page' => 3,   'start_date'     => date( 'Y-m-d H:i:s' )
-) );
-
-// Loop through the events, displaying the title and content for each
-foreach ( $events as $event ) {
-
-	$event_link = tribe_get_event_link( $event );
-
-	$event_img = get_the_post_thumbnail( $event );
-
-	echo '<div class="container span4">';
-	echo '<a href="' . $event_link . '">'  ;				
-	echo $event_img;
-   echo '<div class="overlay"><div class="text"><h3>' . $event->post_title . '</h3></div></div>';
-   echo '</a></div>';
-}
- ?>
-			</section>
-
-
 		
 		<!-- /section -->
 
-				<!-- section -->
-
-
-			<section class="grid">
-
-				<div class="homepageEvents span6" >
-					
-					<?php the_field('events'); ?>
-					<div class="btnBox"><a href="events"><button class="btn bottomButton">SEE ALL EVENTS</button></a>	</div>
-				</div>
-				<div class="homepageEvents span6" >
-					
-					<?php the_field('parties'); ?>
-					<div class="btnBox"><a href="private-parties"><button class="btn bottomButton">FIND OUT MORE</button></a>	</div>
-				</div>
-			</section>
-
-		<!-- /section -->
+			
 	</main>
 
 
