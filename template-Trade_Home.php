@@ -1,4 +1,4 @@
-<?php /* Template Name: Template - Trade Home */ get_header('video'); ?>
+<?php /* Template Name: Template - Trade Home */ get_header(); ?>
 
 	
 	<main class="grid">
